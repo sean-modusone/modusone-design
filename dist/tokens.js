@@ -47,6 +47,14 @@ export const color = {
   "ico": {
     "dark": "rgba(244,241,234,.5)",
     "light": "rgba(15,29,34,.55)"
+  },
+  "positive": {
+    "dark": "#7EDBB6",
+    "light": "#12775A"
+  },
+  "negative": {
+    "dark": "#E4703F",
+    "light": "#B4501F"
   }
 };
 

@@ -18,7 +18,7 @@ const ratio = (a, b) => {
 };
 
 const FLOOR = T.$meta.contrastFloor;
-const onGround = ['ink', 'muted', 'accent', 'accent2', 'spark'];
+const onGround = ['ink', 'muted', 'accent', 'accent2', 'spark', 'positive', 'negative'];
 
 for (const mode of ['dark', 'light']) {
   const bg = T.color.bg[mode];

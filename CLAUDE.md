@@ -39,6 +39,8 @@ site wins.
   upright, never bold.
 - Three accents, each with one job: `spark` is the voice (one italic phrase, the lens dot),
   `accent` is structure (numerals, rules, focus), `accent2` is labels only (≤13px mono).
+- Two signal tokens, `positive` and `negative`, colour figures and statuses by meaning in
+  apps. They share spark/accent hues deliberately; they are never decoration.
 - Hairlines separate sections, not boxes. Cards get `bg2` + a 2px terracotta top rule —
   no border, no shadow, no rounding past 8px.
 - The logo is `modus` regular + `one` bold. Mark is r20 ring at full ink, stroke 2, dot r6

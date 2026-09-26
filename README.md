@@ -17,7 +17,7 @@ Pin to a release rather than tracking `main`, so a brand change never lands in a
 without you choosing it:
 
 ```bash
-npm install github:sean-modusone/modusone-design#v1.0.0
+npm install github:sean-modusone/modusone-design#v1.1.0
 ```
 
 ## Use
@@ -89,6 +89,18 @@ labels ≤13px). Three accents, each with one job:
 - `--m1-accent2` is **labels only** — mono eyebrows and kickers, never above 13px.
 
 Swapping those three is the fastest way to look almost-right-but-off.
+
+Two **signal** tokens exist for apps that must colour a figure by what it means
+(v1.1.0):
+
+- `--m1-positive` — money in, paid, repayable, confirmed.
+- `--m1-negative` — money out, owed, overdue, payable, needs attention.
+
+They share the hues of `spark` and `accent` on purpose, so no new colour enters the
+palette, but they are separate tokens with a separate job: figures and status only, never
+decoration or headlines, and never the only cue — pair them with a sign, a word or a
+position. In app code, use these rather than `spark`/`accent` whenever the colour carries
+meaning.
 
 Hairlines separate sections, not boxes. If something genuinely needs to be a card it gets
 `--m1-bg2` and a 2px terracotta top rule — no border, no shadow, no rounding past 8px.

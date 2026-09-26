@@ -16,6 +16,8 @@ module.exports = {
         'm1-pill': c('pill'),
         'm1-pillink': c('pillink'),
         'm1-ico': c('ico'),
+        'm1-positive': c('positive'),
+        'm1-negative': c('negative'),
       },
       fontFamily: {
         'm1-display': 'var(--m1-font-display)',

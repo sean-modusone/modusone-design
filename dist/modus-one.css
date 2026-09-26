@@ -30,6 +30,8 @@
   --m1-pill:     #F4F1EA;
   --m1-pillink:  #101E24;
   --m1-ico:      rgba(244,241,234,.5);
+  --m1-positive: #7EDBB6;
+  --m1-negative: #E4703F;
 
   --m1-font-display:  'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --m1-font-accent:   'Newsreader', Georgia, 'Times New Roman', serif;
@@ -51,6 +53,8 @@
   --m1-pill:     #0F1D22;
   --m1-pillink:  #FBFAF7;
   --m1-ico:      rgba(15,29,34,.55);
+  --m1-positive: #12775A;
+  --m1-negative: #B4501F;
 }
 
 /* --- Base ---------------------------------------------------------------- */
