@@ -1,0 +1,23 @@
+{
+  "name": "@modusone/design",
+  "version": "1.0.0",
+  "description": "Modus One design system — Deep Field tokens, type and primitives.",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "files": ["dist", "tailwind.cjs", "src", "scripts", "README.md"],
+  "main": "./dist/tokens.js",
+  "exports": {
+    ".": "./dist/tokens.js",
+    "./css": "./dist/modus-one.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./tailwind": "./tailwind.cjs"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepare": "node scripts/build.mjs"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/sean-modusone/modusone-design.git" },
+  "keywords": ["modus-one", "design-system", "design-tokens"]
+}
