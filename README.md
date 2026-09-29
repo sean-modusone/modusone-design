@@ -76,6 +76,7 @@ the latter.
 | `@modusone/design` | `color`, `font`, `contrastFloor` as JS |
 | `@modusone/design/tokens.json` | The same, machine-readable, with the documented job of every token |
 | `@modusone/design/tailwind` | Tailwind preset |
+| `PATTERNS.md` | UX patterns shared by every app: Picker, filter bar, tables, planning with references, undo, notices. Import it from each app's `CLAUDE.md` with `@node_modules/@modusone/design/PATTERNS.md` |
 
 ## The rules that matter
 

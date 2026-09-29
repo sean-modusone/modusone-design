@@ -11,6 +11,13 @@ a generated file — the next build overwrites it, and `npm test` will fail on t
 Non-token CSS (the `.m1-*` primitives) lives in `src/primitives.css` and is concatenated
 into the output as-is.
 
+## Patterns
+
+`PATTERNS.md` is the interaction layer: how choices, tables, figures, planning, undo and notices behave
+in every Modus One app. It ships in the package and each app imports it into its own `CLAUDE.md`. A new
+pattern built in any app is described there in the same change, with its adoption row; a change to a
+pattern is a release like a token change.
+
 ## After any change
 
 ```bash
