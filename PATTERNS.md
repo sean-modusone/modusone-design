@@ -161,6 +161,22 @@ Reference: Ledger `src/views/Modal.tsx`.
 - **Stale:** data older than the freshness threshold is labelled with its age and muted; the alarm still
   shows.
 
+## 13. Suggestions with their evidence
+
+When the app infers something (a seasonal cost, a yearly bill, a shortfall), it is shown as a **suggestion**,
+never applied silently:
+- A list item (`.hu`): a `.flag` naming the kind (SEASONAL, YEARLY), a bold title, the figure on the right,
+  one line saying how it was worked out ("Usually €1,145.97 in November (one year), against €205.00 in a usual
+  month"), then an **evidence line**: the actual payments it rests on, in mono, with their dates.
+- **Actions** sit under it: the confirming one (Add to commitments, Plan €1,120 a month) and **Dismiss**.
+  A dismissal is remembered server-side; dismissed items hide behind "N dismissed · Show them", where they
+  can be brought back.
+- A one-click fix that changes a plan follows §9: it applies at once and offers Undo.
+- Where the fix can't apply (an account that isn't connected), the row says why in plain words instead of
+  showing a disabled button.
+
+Reference: Budget `src/views/ComingUp.tsx` with `seasonal_outlook()`, `yearly_items()`, `sinking_outlook()`.
+
 ---
 
 ## Adoption
@@ -177,6 +193,7 @@ Reference: Ledger `src/views/Modal.tsx`.
 | Bulk undo bar (§9) | to adopt where bulk actions exist | ✓ |
 | Inline undo (§9) | ✓ | — |
 | Modal, toast (§10–11) | ✓ | — (not needed yet) |
+| Suggestions with evidence (§13) | to adopt wherever Ledger suggests (bank-feed matches, recurring items) | ✓ |
 
 When an app adopts a pattern, update its cell in the same change.
 
