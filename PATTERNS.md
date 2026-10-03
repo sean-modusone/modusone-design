@@ -177,6 +177,27 @@ never applied silently:
 
 Reference: Budget `src/views/ComingUp.tsx` with `seasonal_outlook()`, `yearly_items()`, `sinking_outlook()`.
 
+## 14. Charts: an answer against a reference
+
+The Modus One chart is usually **one answer and one reference**, not a set of equal categories ("with the
+plan" against "bills only", this year against last year). Follow the dataviz skill's procedure, with these
+brand parameters:
+- **The answer** is `accent` (terracotta), **the reference** is `muted` grey, both 2px lines with round joins.
+  Validated with the skill's checker (light: CVD ΔE 9.9, normal 16.9; dark: 13.1 / 18.4; contrast ≥ 3:1).
+  The grey fails the *categorical* chroma check by design: it's a de-emphasis, not a category, so identity
+  never rests on colour: a line-key legend above, direct end labels (dropped when they'd collide or on a
+  phone), a crosshair readout naming both, and a "Show as a table" view.
+- Gridlines are `line` hairlines; **the zero line is stronger** (ink at ~45%) because crossing it is the news.
+  The answer's low point carries a dot (accent, 2px surface ring) and is restated in words under the chart.
+- **Crosshair, not per-point hover:** it snaps to the nearest day, the readout lists both series with values
+  first, and the arrow keys move it (the plot area is focusable). The readout flips side near the edge.
+- Size from the container with a **callback ref** + `ResizeObserver` (an effect can miss a box that mounts
+  after the first render). Under 520px: tighter margins, no end labels.
+- Money is plotted with `Number()` for geometry only; every figure shown is formatted from the exact string.
+- One axis, always. A second measure is a second chart.
+
+Reference: Budget `src/views/ForecastChart.tsx` with `forecast_days()`.
+
 ---
 
 ## Adoption
@@ -194,6 +215,7 @@ Reference: Budget `src/views/ComingUp.tsx` with `seasonal_outlook()`, `yearly_it
 | Inline undo (§9) | ✓ | — |
 | Modal, toast (§10–11) | ✓ | — (not needed yet) |
 | Suggestions with evidence (§13) | to adopt wherever Ledger suggests (bank-feed matches, recurring items) | ✓ |
+| Charts: answer against reference (§14) | to adopt: Forecast | ✓ |
 
 When an app adopts a pattern, update its cell in the same change.
 
