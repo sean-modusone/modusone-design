@@ -26,6 +26,8 @@ module.exports = {
       },
       maxWidth: { 'm1-measure': 'var(--m1-measure)' },
       borderRadius: { 'm1': 'var(--m1-radius)' },
+      transitionDuration: { 'm1-spatial': 'var(--m1-dur-spatial)', 'm1-effects': 'var(--m1-dur-effects)', 'm1-reduced': 'var(--m1-dur-reduced)' },
+      transitionTimingFunction: { 'm1-spatial': 'var(--m1-ease-spatial)', 'm1-effects': 'var(--m1-ease-effects)' },
     },
   },
 };

@@ -68,12 +68,29 @@ module.exports = { presets: [require('@modusone/design/tailwind')] };
 Self-host or subset-and-embed if the app needs zero external requests — the website does
 the latter.
 
+## Two themes
+
+**Deep Field** is the corporate theme and the default everywhere in this README. **Horizon** is the
+consumer theme, for apps people use in their own time: light by default, filled rounded cards, sentence-case
+display type in Bricolage Grotesque, and two meaningful colours (`lead` and `signal`). An app uses one or
+the other. `PATTERNS.md` lists what differs between them.
+
+```js
+import '@modusone/design/horizon.css';
+import { horizon } from '@modusone/design';   // horizon.color, .font, .size, .motion, .logo
+```
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Spline+Sans+Mono:wght@400;500&display=swap">
+```
+
 ## What's in it
 
 | Import | What |
 | ------ | ---- |
 | `@modusone/design/css` | Tokens as `--m1-*` custom properties plus primitives (`.m1-display`, `.m1-em`, `.m1-eyebrow`, `.m1-kicker`, `.m1-numeral`, `.m1-lede`, `.m1-body`, `.m1-btn`, `.m1-card`, `.m1-rule`, `.m1-logo`) |
-| `@modusone/design` | `color`, `font`, `contrastFloor` as JS |
+| `@modusone/design/horizon.css` | **Horizon**, the consumer theme: `--hz-*` custom properties. Paper (light) by default, Forest under `[data-theme="dark"]`. Tokens only, no primitives yet |
+| `@modusone/design` | `color`, `font`, `motion`, `horizon`, `contrastFloor` as JS |
 | `@modusone/design/tokens.json` | The same, machine-readable, with the documented job of every token |
 | `@modusone/design/tailwind` | Tailwind preset |
 | `PATTERNS.md` | UX patterns shared by every app: Picker, filter bar, tables, planning with references, undo, notices. Import it from each app's `CLAUDE.md` with `@node_modules/@modusone/design/PATTERNS.md` |
@@ -110,16 +127,16 @@ The logo is `modus` regular + **`one` bold**. The bold is on *one*.
 
 ## Changing a token
 
-`src/tokens.json` is the only place a colour is ever edited. Everything in `dist/` is
+`src/tokens.json` is the only place a colour or a motion value is ever edited. Everything in `dist/` is
 generated:
 
 ```bash
 npm run build    # regenerate dist/ and tailwind.cjs
-npm test         # contrast + drift checks
+npm test         # contrast, no-overshoot and drift checks
 ```
 
-`npm test` fails if any text token drops below WCAG AA on its own ground, and if `dist/`
-has drifted from `src/tokens.json`. Measured minimum across the system is **4.90:1**
+`npm test` fails if any text token drops below WCAG AA on its own ground, if the spatial
+spring overshoots, and if `dist/` has drifted from `src/tokens.json`. Measured minimum across the system is **4.90:1**
 (`accent` on light ground, used only for 46px numerals, rules and focus rings, where the
 requirement is 3:1).
 

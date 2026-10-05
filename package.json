@@ -1,7 +1,7 @@
 {
   "name": "@modusone/design",
-  "version": "1.4.0",
-  "description": "Modus One design system — Deep Field tokens, type and primitives.",
+  "version": "1.5.0",
+  "description": "Modus One design system — Deep Field (corporate) and Horizon (consumer) tokens, type and primitives.",
   "license": "UNLICENSED",
   "private": false,
   "type": "module",
@@ -10,6 +10,7 @@
   "exports": {
     ".": "./dist/tokens.js",
     "./css": "./dist/modus-one.css",
+    "./horizon.css": "./dist/horizon.css",
     "./tokens.json": "./dist/tokens.json",
     "./tailwind": "./tailwind.cjs"
   },

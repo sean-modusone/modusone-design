@@ -64,5 +64,116 @@ export const font = {
   "mono": "'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 };
 
+export const motion = {
+  "spatial": {
+    "stiffness": 170,
+    "damping": 26,
+    "mass": 1,
+    "durationMs": 730,
+    "easing": "linear(0, 0.062, 0.193, 0.337, 0.477, 0.593, 0.692, 0.768, 0.827, 0.873, 0.907, 0.933, 0.951, 0.965, 0.975, 0.982, 0.987, 0.991, 0.994, 0.995, 0.997, 0.998, 0.998, 0.999, 1)"
+  },
+  "effects": {
+    "durationMs": 150,
+    "easing": "ease-out"
+  },
+  "reduced": {
+    "durationMs": 120,
+    "easing": "ease-out"
+  }
+};
+
+export const horizon = {
+  "color": {
+    "ground": {
+      "light": "#F6F4EF",
+      "dark": "#14342C"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#1B4338"
+    },
+    "ink": {
+      "light": "#0F1D22",
+      "dark": "#F2F5EF"
+    },
+    "soft": {
+      "light": "#586769",
+      "dark": "#A8C6BA"
+    },
+    "line": {
+      "light": "rgba(15,29,34,.12)",
+      "dark": "rgba(242,245,239,.14)"
+    },
+    "line2": {
+      "light": "rgba(15,29,34,.26)",
+      "dark": "rgba(242,245,239,.3)"
+    },
+    "lead": {
+      "light": "#12775A",
+      "dark": "#9BE8C8"
+    },
+    "onLead": {
+      "light": "#FFFFFF",
+      "dark": "#10261F"
+    },
+    "signal": {
+      "light": "#C8552B",
+      "dark": "#FF9E80"
+    },
+    "signalText": {
+      "light": "#A9471C",
+      "dark": "#FF9E80"
+    },
+    "signalFill": {
+      "light": "#F6CDBB",
+      "dark": "#FF9E80"
+    },
+    "onSignal": {
+      "light": "#33170B",
+      "dark": "#10261F"
+    },
+    "dock": {
+      "light": "#0F1D22",
+      "dark": "#0C231D"
+    },
+    "dockInk": {
+      "light": "#F6F4EF",
+      "dark": "#F2F5EF"
+    }
+  },
+  "font": {
+    "display": "'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "mono": "'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+  },
+  "size": {
+    "radiusCard": "20px",
+    "radiusField": "12px",
+    "radiusPill": "999px"
+  },
+  "motion": {
+    "spatial": {
+      "stiffness": 280,
+      "damping": 25,
+      "mass": 1,
+      "durationMs": 540,
+      "easing": "linear(0, 0.064, 0.198, 0.365, 0.523, 0.669, 0.783, 0.875, 0.937, 0.981, 1.007, 1.022, 1.027, 1.027, 1.025, 1.02, 1.016, 1.011, 1.008, 1.005, 1.003, 1.001, 1, 1, 1)"
+    },
+    "effects": {
+      "durationMs": 150,
+      "easing": "ease-out"
+    },
+    "reduced": {
+      "durationMs": 120,
+      "easing": "ease-out"
+    }
+  },
+  "logo": {
+    "grid": 44,
+    "ringRadius": 20,
+    "ringStroke": 3,
+    "dotRadius": 6
+  }
+};
+
 export const contrastFloor = 4.5;
-export default { color, font, contrastFloor };
+export default { color, font, motion, horizon, contrastFloor };
