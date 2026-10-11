@@ -168,8 +168,14 @@ Ledger `src/views/Plans.tsx`, `src/views/Invoices.tsx` (inline undo).
 | `.undobar` | §9 | `bg2`, `accent` left rule |
 | `.flag` | a state on a row: SHORT, STALE, DETECTED · 85%, SMALL & OFTEN | mono 9.5px caps pill, hairline border |
 | `.toast` | brief confirmation that needs no action | ink pill, bottom centre |
+| `.evtoggle` | evidence held for a row, one pill per document: RECEIPT, MED 2 | the `.flag` pill as a button (`aria-pressed`). Not held: muted; required and missing: `negative`; held: `positive` with a leading ✓ |
 
 Status words are mono caps; colour follows meaning (`negative` for trouble), never on its own.
+
+**Evidence toggles** record that a document exists, never the document. One click flips it and saves at once (no
+undo bar: the click is its own undo). A pill appears only where that document matters for the row (MED 2 only on
+non-routine dental), and the screen counts what's missing in a `.notice` ("Evidence to find: 12 receipts · 3 MED 2
+forms"). Reference: Budget `src/views/Tax.tsx` (`evtoggle`).
 
 ## 11. Dialogs
 
@@ -360,6 +366,7 @@ Where an app shows generated prose (why a period runs short, a summary of a mont
 | Modal, toast (§10–11) | ✓ | — (not needed yet) |
 | Suggestions with evidence (§13) | to adopt wherever Ledger suggests (bank-feed matches, recurring items) | ✓ |
 | Charts: answer against reference (§14) | to adopt: Forecast | ✓ |
+| Evidence toggles (§10) | to adopt where Ledger tracks documents (receipts on expenses) | ✓ |
 | Motion values (§15) | proposed | proposed |
 | Narrow forms: bottom sheet, bottom bar (§16–17) | proposed | proposed |
 | Row actions on hover and focus, swipe (§18) | proposed | proposed |
